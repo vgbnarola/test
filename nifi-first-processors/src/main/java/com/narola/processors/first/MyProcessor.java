@@ -71,6 +71,14 @@ public class MyProcessor extends AbstractProcessor {
             .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
             .build();
 
+    public static final PropertyDescriptor MY_PROPERTY3 = new PropertyDescriptor
+            .Builder().name("MY_PROPERTY3")
+            .displayName("My property3")
+            .description("Example Property3")
+            .required(false)
+            .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
+            .build();
+
 
     public static final Relationship MY_RELATIONSHIP = new Relationship.Builder()
             .name("MY_RELATIONSHIP")
@@ -87,6 +95,7 @@ public class MyProcessor extends AbstractProcessor {
         descriptors.add(MY_PROPERTY);
         descriptors.add(MY_PROPERTY1);
         descriptors.add(MY_PROPERTY2);
+        descriptors.add(MY_PROPERTY3);
         descriptors = Collections.unmodifiableList(descriptors);
 
         relationships = new HashSet<>();
